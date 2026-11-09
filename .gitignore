@@ -1,0 +1,16 @@
+# Scratch and temporary testing files
+scratch/
+.system_generated/
+*.log
+push_to_github.bat
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
