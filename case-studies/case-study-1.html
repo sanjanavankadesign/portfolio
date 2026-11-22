@@ -27,7 +27,7 @@
                         hand: ['"Geist Mono"', 'ui-monospace', 'monospace'],
                     },
                     colors: {
-                        cream: '#FAF7EE',
+                        cream: '#FBFAFD',
                         darkBg: '#180B10',
                         peony: '#FAD2E1',
                         burgundy: '#770523',
@@ -36,9 +36,9 @@
                         bloodorange: '#DD4E28',
                         
                         // Semantic Aliases
-                        stickypink: '#D81A67',
-                        stickyyellow: '#D0D996',
-                        stickyblue: '#DD4E28',
+                        stickypink: '#E0479F',
+                        stickyyellow: '#C6B2FF',
+                        stickyblue: '#9FD8FF',
                     },
                     boxShadow: {
                         'brutal': '4px 4px 0px 0px rgba(24, 11, 16, 1)',
@@ -57,7 +57,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css?v=7.2">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=7.3">
+    <link rel="stylesheet" href="../assets/css/case-y2k.css?v=1.3">
 </head>
 <body class="bg-cream dark:bg-darkBg text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-stickypink selection:text-white">
 
@@ -65,9 +66,7 @@
     <header class="sticky top-0 z-50 backdrop-blur-md bg-cream/90 dark:bg-darkBg/90 border-b-2 border-slate-900 dark:border-slate-700 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="../index.html" class="group flex items-center gap-3" aria-label="Sanjana Vanka Portfolio Home">
-                <div class="h-12 px-3 bg-white border-2 border-slate-900 shadow-brutal dark:shadow-brutal-dark rounded-xl flex items-center justify-center transition-transform">
-                    <img src="../assets/images/logo.png" alt="SAN Logo — Sanjana Vanka" class="h-8 w-auto object-contain">
-                </div>
+                <img src="../assets/images/logo-spin.webp" alt="SAN Logo — Sanjana Vanka" width="87" height="64" class="h-14 w-auto">
             </a>
 
             <!-- Desktop Navigation Menu -->
@@ -129,6 +128,11 @@
             </div>
         </div>
     </header>
+
+    <div class="cs-shell">
+    <div class="cs-win">
+        <div class="cs-tb"><span class="cs-tb__title">C:\SANJANA\PROJECTS\LEOFORCE_CONNECT</span><span class="cs-tb__ctl"><span aria-hidden="true"></span><span aria-hidden="true"></span><a href="../index.html#work" aria-label="Close case study and go back to projects">×</a></span></div>
+        <div class="cs-addr"><a href="../index.html#work">← Projects</a><b>C:\SANJANA\PROJECTS\LEOFORCE_CONNECT</b></div>
 
     <!-- Floating Sticky Case Study Contents Bar -->
     <div class="sticky top-[96px] z-40 px-4 sm:px-6 my-4 pointer-events-none">
@@ -197,11 +201,10 @@
         <!-- Hero Card Graphic Frame — High-Fidelity Laptop Hardware Mockup Presentation -->
         <div class="artifact-frame relative rounded-3xl overflow-hidden bg-white dark:bg-slate-900 border-2 border-slate-900 shadow-brutal-lg dark:shadow-brutal-dark">
             <div class="relative overflow-hidden bg-[#FAF7EE] dark:bg-slate-950 p-2 sm:p-6 flex items-center justify-center">
-                <img src="../assets/images/connect-laptop-mockup.png?v=3" alt="Connect 2.0 MacBook Pro Laptop Mockup — Designed by Sanjana Vanka" class="w-full max-w-4xl h-auto object-contain blur-[4px] transition-all duration-500 nda-protected-screen cursor-pointer" data-nda="true">
+                <img src="../assets/images/connect-laptop-mockup.png?v=5" alt="Connect 2.0 MacBook Pro Laptop Mockup — Designed by Sanjana Vanka" class="w-full max-w-4xl h-auto object-contain zoomable cursor-zoom-in">
             </div>
             <div class="px-6 py-3.5 bg-cream dark:bg-slate-900 border-t-2 border-slate-900 flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs text-slate-700 dark:text-slate-300">
                 <span class="font-sans font-bold">FIG 01: Dashboard</span>
-                <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
             </div>
         </div>
     </section>
@@ -277,14 +280,6 @@
                 </p>
             </div>
 
-            <!-- What is Connect Visual Embed -->
-            <div class="artifact-frame relative p-3 sm:p-4 bg-white dark:bg-slate-900 rounded-2xl border-2 border-slate-900 shadow-brutal my-6">
-                <img src="../assets/images/what-is-connect.png?v=2" alt="What is Connect — Platform Interface & Overview" class="w-full h-auto object-contain rounded-xl nda-protected-screen cursor-pointer" data-nda="true">
-                <div class="pt-3 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800 mt-3">
-                    <span class="font-sans text-xs font-bold">FIG 02: Connect Platform Interface & Core Feature Architecture Overview</span>
-                    <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
-                </div>
-            </div>
 
             <!-- Business Brief -->
             <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border-2 border-slate-900 shadow-brutal space-y-2">
@@ -520,10 +515,9 @@
                     Establishing system structure, color philosophy (Cosmic Indigo, Stellar Blue, Nebula Green, Solar Flare, Quantum Purple), grid anatomy, and typography specs.
                 </p>
                 <div class="artifact-frame relative p-3 sm:p-4 bg-white rounded-2xl border-2 border-slate-900 shadow-brutal my-2">
-                    <img src="../assets/images/design-system.png?v=2" alt="Leoforce Design System Language & Specifications" class="w-full h-auto object-contain rounded-xl blur-[3px] nda-protected-screen cursor-pointer" data-nda="true">
+                    <img src="../assets/images/design-system.png?v=5" alt="Leoforce Design System Language & Specifications" class="w-full h-auto object-contain rounded-xl zoomable cursor-zoom-in">
                     <div class="pt-3 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-900 border-t border-slate-200 mt-3">
                         <span class="font-sans text-xs font-bold">FIG 07: Leoforce Design System Language & CSS Tokenization</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
             </div>
@@ -546,19 +540,17 @@
                     <em>Second collaborative brainstorming session focused on identifying and iterating on key features and functional requirements for the Connect platform.</em>
                 </p>
                 <div class="artifact-frame relative p-3 sm:p-4 bg-white rounded-2xl border-2 border-slate-900 shadow-brutal my-2">
-                    <img src="../assets/images/iterations.png?v=2" alt="Connect UI Iterations Collage" class="w-full h-auto object-contain rounded-xl blur-[3px] nda-protected-screen cursor-pointer" data-nda="true">
+                    <img src="../assets/images/iterations.png?v=5" alt="Connect UI Iterations Collage" class="w-full h-auto object-contain rounded-xl zoomable cursor-zoom-in">
                     <div class="pt-3 px-1 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-900 border-t border-slate-200 mt-3">
                         <span class="font-sans text-xs font-bold">FIG 08: UI Design Iterations & Functional Interface Explorations</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
 
                 <!-- Figma Link Button -->
                 <div class="pt-4 text-center">
-                    <a href="https://www.figma.com/design/T7I5vpt26rNd0vCbcY2sAY/Connect--Freelance-Recruiter-?node-id=378-2" target="_blank" rel="noopener noreferrer" onclick="return openFigmaModal(this.href)" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-stickypink text-slate-950 font-display font-bold text-sm border-2 border-slate-900 shadow-brutal hover:translate-x-0.5 hover:translate-y-0.5 transition-all cursor-pointer">
+                    <a href="https://www.figma.com/design/T7I5vpt26rNd0vCbcY2sAY/Connect--Freelance-Recruiter-?node-id=378-2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-stickypink text-slate-950 font-display font-bold text-sm border-2 border-slate-900 shadow-brutal hover:translate-x-0.5 hover:translate-y-0.5 transition-all cursor-pointer">
                         <img src="../assets/images/figma-icon.png" alt="Figma" class="w-5 h-5 rounded-md object-contain shrink-0 shadow-sm">
                         <span>VIEW ALL ITERATIONS ON FIGMA</span>
-                        <span class="material-symbols-outlined w-4 h-4">lock</span>
                         <span class="material-symbols-outlined w-4 h-4">north_east</span>
                     </a>
                 </div>
@@ -575,20 +567,6 @@
                 </p>
             </div>
 
-            <!-- NDA Notice Banner -->
-            <div class="p-5 rounded-2xl bg-amber-500/10 dark:bg-amber-500/20 border-2 border-amber-500/40 text-amber-900 dark:text-amber-200 flex items-start gap-4 shadow-brutal">
-                <div class="p-2.5 bg-amber-500/20 rounded-xl shrink-0 text-amber-600 dark:text-amber-400">
-                    <span class="material-symbols-outlined w-6 h-6">gpp_maybe</span>
-                </div>
-                <div>
-                    <h4 class="font-serif text-base font-bold">
-                        <span>Protected Under Non-Disclosure Agreement (NDA)</span>
-                    </h4>
-                    <p class="text-xs sm:text-sm mt-1 leading-relaxed text-slate-700 dark:text-slate-300">
-                        Unblurred views are protected under client NDA. Access complete designs in the password-protected Figma file. <a href="mailto:sanju101vanka@gmail.com" class="underline">Email me to request access.</a>
-                    </p>
-                </div>
-            </div>
 
             <!-- Showcase Item 1: Mission Control Dashboard -->
             <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-3xl border-2 border-slate-900 shadow-brutal dark:shadow-brutal-dark space-y-6">
@@ -614,17 +592,10 @@
                 <!-- High-Res Mockup Frame -->
                 <div class="artifact-frame relative p-2 sm:p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl border-2 border-slate-900 shadow-brutal group/ndamockup">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="../assets/images/connect-mockup-dashboard.png?v=2" alt="Connect 2.0 Recruiter Mission Control Dashboard" class="w-full h-auto object-cover rounded-xl blur-[6px] transition-all duration-500 nda-protected-screen cursor-pointer" data-nda="true">
-                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover/ndamockup:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded-xl backdrop-blur-[2px]">
-                            <div class="px-4 py-2 rounded-xl bg-slate-900/90 text-white font-mono text-xs border border-slate-700 shadow-brutal flex items-center gap-2">
-                                <span class="material-symbols-outlined w-4 h-4 text-stickypink">lock</span>
-                                <span>Protected Under NDA — Click to View Info</span>
-                            </div>
-                        </div>
+                        <img src="../assets/images/connect-mockup-dashboard.png?v=5" alt="Connect 2.0 Recruiter Mission Control Dashboard" class="w-full h-auto object-cover rounded-xl zoomable cursor-zoom-in">
                     </div>
                     <div class="pt-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-3 text-xs">
                         <span class="font-mono font-bold">FIG 09.a: Central Mission Control Dashboard with Active Job Pipelines & Real-Time Event Feed</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
 
@@ -669,17 +640,10 @@
                 <!-- High-Res Mockup Frame -->
                 <div class="artifact-frame relative p-2 sm:p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl border-2 border-slate-900 shadow-brutal group/ndamockup">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="../assets/images/connect-mockup-candidate-chat.png?v=2" alt="Connect 2.0 Multichannel Candidate Communication Hub" class="w-full h-auto object-cover rounded-xl blur-[6px] transition-all duration-500 nda-protected-screen cursor-pointer" data-nda="true">
-                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover/ndamockup:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded-xl backdrop-blur-[2px]">
-                            <div class="px-4 py-2 rounded-xl bg-slate-900/90 text-white font-mono text-xs border border-slate-700 shadow-brutal flex items-center gap-2">
-                                <span class="material-symbols-outlined w-4 h-4 text-stickypink">lock</span>
-                                <span>Protected Under NDA — Click to View Info</span>
-                            </div>
-                        </div>
+                        <img src="../assets/images/connect-mockup-candidate-chat.png?v=5" alt="Connect 2.0 Multichannel Candidate Communication Hub" class="w-full h-auto object-cover rounded-xl zoomable cursor-zoom-in">
                     </div>
                     <div class="pt-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-3 text-xs">
                         <span class="font-mono font-bold">FIG 09.b: Omnichannel Candidate Chat Interface with 76% Match Score & Quick-Action Rail</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
 
@@ -724,17 +688,10 @@
                 <!-- High-Res Mockup Frame -->
                 <div class="artifact-frame relative p-2 sm:p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl border-2 border-slate-900 shadow-brutal group/ndamockup">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="../assets/images/connect-mockup-ai-outreach.png?v=2" alt="Connect 2.0 AI Candidate Matching & Batch Outreach" class="w-full h-auto object-cover rounded-xl blur-[6px] transition-all duration-500 nda-protected-screen cursor-pointer" data-nda="true">
-                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover/ndamockup:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded-xl backdrop-blur-[2px]">
-                            <div class="px-4 py-2 rounded-xl bg-slate-900/90 text-white font-mono text-xs border border-slate-700 shadow-brutal flex items-center gap-2">
-                                <span class="material-symbols-outlined w-4 h-4 text-stickypink">lock</span>
-                                <span>Protected Under NDA — Click to View Info</span>
-                            </div>
-                        </div>
+                        <img src="../assets/images/connect-mockup-ai-outreach.png?v=5" alt="Connect 2.0 AI Candidate Matching & Batch Outreach" class="w-full h-auto object-cover rounded-xl zoomable cursor-zoom-in">
                     </div>
                     <div class="pt-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-3 text-xs">
                         <span class="font-mono font-bold">FIG 09.c: Candidate Fit Analysis & Omnichannel Bulk Outreach Sequences</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
 
@@ -779,23 +736,16 @@
                 <!-- High-Res Mockup Frame -->
                 <div class="artifact-frame relative p-2 sm:p-4 bg-slate-100 dark:bg-slate-950 rounded-2xl border-2 border-slate-900 shadow-brutal group/ndamockup">
                     <div class="relative overflow-hidden rounded-xl">
-                        <img src="../assets/images/connect-mockup-job-creation.png?v=2" alt="Connect 2.0 Conversational Job Description Creation" class="w-full h-auto object-cover rounded-xl blur-[6px] transition-all duration-500 nda-protected-screen cursor-pointer" data-nda="true">
-                        <div class="absolute inset-0 bg-slate-950/30 opacity-0 group-hover/ndamockup:opacity-100 transition-opacity flex items-center justify-center pointer-events-none rounded-xl backdrop-blur-[2px]">
-                            <div class="px-4 py-2 rounded-xl bg-slate-900/90 text-white font-mono text-xs border border-slate-700 shadow-brutal flex items-center gap-2">
-                                <span class="material-symbols-outlined w-4 h-4 text-stickypink">lock</span>
-                                <span>Protected Under NDA — Click to View Info</span>
-                            </div>
-                        </div>
+                        <img src="../assets/images/connect-mockup-job-creation.png?v=5" alt="Connect 2.0 Conversational Job Description Creation" class="w-full h-auto object-cover rounded-xl zoomable cursor-zoom-in">
                     </div>
                     <div class="pt-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-700 dark:text-slate-300 border-t border-slate-200 dark:border-slate-800 mt-3 text-xs">
                         <span class="font-mono font-bold">FIG 09.d: Natural Language Role Creation & Automated Screening Setup</span>
-                        <span class="font-mono text-slate-500 text-xs flex items-center gap-1"><span class="material-symbols-outlined w-3.5 h-3.5 text-stickypink inline">lock</span> Protected under NDA — Click to view info</span>
                     </div>
                 </div>
 
                 <!-- Figma View in Detail CTA Button -->
                 <div class="pt-2 flex justify-center sm:justify-end">
-                    <a href="https://www.figma.com/design/T7I5vpt26rNd0vCbcY2sAY/Connect--Freelance-Recruiter-?node-id=332-2&t=UZrU2g47qNg9WFQu-1" target="_blank" rel="noopener noreferrer" onclick="return openFigmaModal(this.href)" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-display font-bold text-xs sm:text-sm border-2 border-slate-900 shadow-brutal hover:bg-stickyyellow hover:text-slate-950 transition-all hover:translate-x-0.5 hover:translate-y-0.5 cursor-pointer" title="View Detailed Designs in Figma (Password Protected)">
+                    <a href="https://www.figma.com/design/T7I5vpt26rNd0vCbcY2sAY/Connect--Freelance-Recruiter-?node-id=332-2&t=UZrU2g47qNg9WFQu-1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-display font-bold text-xs sm:text-sm border-2 border-slate-900 shadow-brutal hover:bg-stickyyellow hover:text-slate-950 transition-all hover:translate-x-0.5 hover:translate-y-0.5 cursor-pointer" title="View detailed designs in Figma">
                         <img src="../assets/images/figma-icon.png" alt="Figma" class="w-5 h-5 rounded-md object-contain shrink-0 shadow-sm">
                         <span>VIEW IN DETAIL ON FIGMA</span>
                     </a>
@@ -837,7 +787,6 @@
                     <ul class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 list-disc list-inside">
                         <li><strong>Concept stage:</strong> the project concluded at high fidelity and was not taken into development.</li>
                         <li><strong>Deliberately deferred:</strong> Segments, Reports, and the edge cases found during iteration were scoped to a later phase to keep the core recruiter flow focused.</li>
-                        <li><strong>Client NDA:</strong> final screens are blurred here, so this case study leans on process and rationale.</li>
                     </ul>
                 </div>
                 <div class="p-6 bg-cream dark:bg-slate-800 rounded-2xl border-2 border-slate-900 space-y-3">
@@ -929,6 +878,9 @@
 
     </main>
 
+    </div>
+    </div>
+
     <!-- Bottom Navigation Footer with Email Outreach -->
     <footer id="contact" class="scroll-mt-28 pt-16 pb-12 bg-slate-900 text-white border-t-2 border-slate-900 mt-20">
         <div class="max-w-4xl mx-auto px-6 space-y-12">
@@ -976,7 +928,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../assets/js/main.js?v=6.5"></script>
+    <script src="../assets/js/main.js?v=6.6"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('dark'));</script>
     <!-- Google Material Symbols Icons automatically rendered via web font -->
 </body>
 </html>

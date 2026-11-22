@@ -404,12 +404,6 @@ function createLightbox() {
 
     // Helper: Detect if an image is protected under NDA
     function isNdaScreen(img) {
-        if (!img) return false;
-        if (img.classList.contains('nda-protected-screen') || img.getAttribute('data-nda') === 'true') return true;
-        const src = (img.getAttribute('src') || '').toLowerCase();
-        if (src.includes('connect-mockup') || src.includes('connect-laptop') || src.includes('what-is-connect') || src.includes('iterations')) return true;
-        const alt = (img.getAttribute('alt') || '').toLowerCase();
-        if (alt.includes('connect 2.0') || alt.includes('connect mockup') || alt.includes('connect platform') || alt.includes('nda')) return true;
         return false;
     }
 

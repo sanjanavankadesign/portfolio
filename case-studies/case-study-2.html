@@ -28,7 +28,7 @@
                         inter: ['"Inter"', 'sans-serif'],
                     },
                     colors: {
-                        cream: '#FAF7EE',
+                        cream: '#FBFAFD',
                         darkBg: '#180B10',
                         peony: '#FAD2E1',
                         burgundy: '#770523',
@@ -37,9 +37,9 @@
                         bloodorange: '#DD4E28',
                         
                         // Semantic Aliases
-                        stickypink: '#D81A67',
-                        stickyyellow: '#D0D996',
-                        stickyblue: '#DD4E28',
+                        stickypink: '#E0479F',
+                        stickyyellow: '#C6B2FF',
+                        stickyblue: '#9FD8FF',
 
                         // PATH Visual System Gradients & Accents
                         pathYellowStart: '#FFE83B',
@@ -66,7 +66,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css?v=7.2">
+    <link rel="stylesheet" href="../assets/css/styles.css?v=7.3">
+    <link rel="stylesheet" href="../assets/css/case-y2k.css?v=1.3">
 </head>
 <body class="bg-cream dark:bg-darkBg text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 antialiased selection:bg-stickypink selection:text-white">
 
@@ -74,9 +75,7 @@
     <header class="sticky top-0 z-50 backdrop-blur-md bg-cream/90 dark:bg-darkBg/90 border-b-2 border-slate-900 dark:border-slate-700 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
             <a href="../index.html" class="group flex items-center gap-3" aria-label="Sanjana Vanka Portfolio Home">
-                <div class="h-12 px-3 bg-white border-2 border-slate-900 shadow-brutal dark:shadow-brutal-dark rounded-xl flex items-center justify-center transition-transform">
-                    <img src="../assets/images/logo.png" alt="SAN Logo — Sanjana Vanka" class="h-8 w-auto object-contain">
-                </div>
+                <img src="../assets/images/logo-spin.webp" alt="SAN Logo — Sanjana Vanka" width="87" height="64" class="h-14 w-auto">
             </a>
 
             <!-- Desktop Navigation Menu -->
@@ -138,6 +137,11 @@
             </div>
         </div>
     </header>
+
+    <div class="cs-shell">
+    <div class="cs-win">
+        <div class="cs-tb"><span class="cs-tb__title">C:\SANJANA\PROJECTS\PATH</span><span class="cs-tb__ctl"><span aria-hidden="true"></span><span aria-hidden="true"></span><a href="../index.html#work" aria-label="Close case study and go back to projects">×</a></span></div>
+        <div class="cs-addr"><a href="../index.html#work">← Projects</a><b>C:\SANJANA\PROJECTS\PATH</b></div>
 
     <!-- Floating Sticky Case Study Contents Bar -->
     <div class="sticky top-[96px] z-40 px-4 sm:px-6 my-4 pointer-events-none">
@@ -1259,6 +1263,9 @@
 
     </main>
 
+    </div>
+    </div>
+
     <!-- Bottom Navigation Footer with Email Outreach -->
     <footer id="contact" class="scroll-mt-28 pt-16 pb-12 bg-slate-900 text-white border-t-2 border-slate-900 mt-20">
         <div class="max-w-4xl mx-auto px-6 space-y-12">
@@ -1306,7 +1313,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="../assets/js/main.js?v=6.5"></script>
+    <script src="../assets/js/main.js?v=6.6"></script>
+    <script>document.addEventListener('DOMContentLoaded', () => document.documentElement.classList.remove('dark'));</script>
     <!-- Google Material Symbols Icons automatically rendered via web font -->
 </body>
 </html>

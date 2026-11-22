@@ -1,0 +1,218 @@
+/* ==========================================================================
+   Case studies: Y2K desktop skin (matches the homepage)
+   Loaded after styles.css, overrides the older cream / brutal look.
+   ========================================================================== */
+:root {
+    --ink: #20152A;
+    --ink-soft: #4C3F57;
+    --mute: #7A6E8A;
+    --pink: #E0479F;
+    --pink-deep: #A12C70;
+    --edge: #8F87A8;
+    --edge-soft: #CFC8DD;
+    --panel: #F5F3FA;
+    --chrome: linear-gradient(180deg, #FDFDFF 0%, #D6D3E2 48%, #B9B4CC 52%, #E9E7F2 100%);
+    --pink-chrome: linear-gradient(180deg, #FFB3E2 0%, #E0479F 100%);
+    --gem: linear-gradient(135deg, #FF9BD6, #9E6BFF);
+    --hairline: var(--edge-soft);
+    --hairline-strong: var(--edge);
+}
+
+/* Wallpaper + grid floor */
+html body {
+    background:
+        radial-gradient(1200px 700px at 50% 20%, #FFE3F3 0%, transparent 60%),
+        linear-gradient(180deg, #CFC4F2 0%, #F3C6E2 55%, #F9DDEB 100%) !important;
+    background-attachment: fixed !important;
+    color: var(--ink) !important;
+}
+body::before {
+    content: ""; position: fixed; left: -50%; right: -50%; bottom: 0; height: 46vh; z-index: -1; pointer-events: none;
+    transform: perspective(500px) rotateX(62deg); transform-origin: bottom;
+    background-image: linear-gradient(rgba(150, 90, 190, .32) 1px, transparent 1px), linear-gradient(90deg, rgba(150, 90, 190, .32) 1px, transparent 1px);
+    background-size: 60px 60px;
+    -webkit-mask-image: linear-gradient(transparent, #000 60%);
+    mask-image: linear-gradient(transparent, #000 60%);
+}
+body::after { display: none; }
+::selection { background: var(--pink); color: #fff; }
+
+/* No dark theme on the Y2K skin */
+#theme-toggle { display: none !important; }
+
+/* ---------- Header = chrome title bar ---------- */
+body > header {
+    background: var(--chrome) !important;
+    backdrop-filter: none !important;
+    border-bottom: 1px solid var(--edge) !important;
+    box-shadow: inset 0 1px 0 #fff, 0 6px 20px -12px rgba(50, 20, 70, .45) !important;
+}
+body > header nav a { font-family: 'Michroma', sans-serif; font-weight: 400; font-size: 11px; letter-spacing: .04em; }
+body > header nav a:hover { color: var(--pink) !important; }
+body > header a[aria-label*="LinkedIn"],
+body > header a[aria-label*="Behance"],
+#mobile-menu-toggle {
+    background: var(--chrome) !important; border: 0 !important; border-radius: 7px !important;
+    box-shadow: 0 0 0 1px var(--edge), 0 2px 0 var(--edge) !important; color: var(--ink) !important;
+}
+body > header a[href*="Resume.pdf"].hidden {
+    background: var(--pink-chrome) !important; color: #fff !important; border: 0 !important; border-radius: 7px !important;
+    box-shadow: 0 0 0 1px var(--pink-deep), 0 2px 0 var(--pink-deep) !important;
+    font-family: 'Michroma', sans-serif; font-weight: 400; font-size: 11px;
+}
+#mobile-menu { background: var(--panel) !important; border-color: var(--edge) !important; }
+
+/* ---------- Content window ---------- */
+.cs-shell { max-width: 1000px; margin: 28px auto 0; padding: 0 16px; position: relative; z-index: 1; }
+.cs-win {
+    background: var(--panel); border-radius: 10px; padding-bottom: 24px;
+    box-shadow: 0 0 0 1px var(--edge), inset 0 1px 0 2px #fff, 0 30px 60px -16px rgba(50, 20, 70, .45);
+}
+.cs-tb {
+    height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 10px;
+    background: var(--chrome); border-bottom: 1px solid var(--edge); border-radius: 10px 10px 0 0;
+}
+.cs-tb__title { font: 400 10px 'Michroma', sans-serif; display: flex; gap: 8px; align-items: center; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; color: var(--ink); }
+.cs-tb__title::before { content: ""; flex: none; width: 12px; height: 12px; border-radius: 3px; background: var(--gem); }
+.cs-tb__ctl { display: flex; gap: 5px; flex: none; }
+.cs-tb__ctl a, .cs-tb__ctl span { width: 16px; height: 14px; border-radius: 3px; background: linear-gradient(#fff, #CFCBDD); box-shadow: 0 0 0 1px var(--edge); display: grid; place-items: center; font: 700 9px/1 'Geist Mono', monospace; color: var(--ink); text-decoration: none; }
+.cs-tb__ctl a:hover { background: var(--pink-chrome); color: #fff; }
+.cs-addr { display: flex; align-items: center; gap: 10px; padding: 7px 12px; border-bottom: 1px solid #D6D2E2; font: 500 11px 'Geist Mono', monospace; color: #6E6280; background: #FBFAFD; }
+.cs-addr a { color: var(--pink); white-space: nowrap; }
+.cs-addr a:hover { text-decoration: underline; }
+.cs-addr b { font-weight: 500; padding: 3px 10px; border-radius: 4px; background: #fff; box-shadow: inset 0 0 0 1px var(--edge-soft); color: var(--ink); flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* Contents bar: chrome toolbar */
+.cs-win > .sticky > div {
+    background: var(--chrome) !important; border: 0 !important; border-radius: 8px !important;
+    box-shadow: 0 0 0 1px var(--edge), 0 2px 0 var(--edge), 0 12px 24px -14px rgba(50, 20, 70, .5) !important;
+}
+.cs-win > .sticky a { font-family: 'Michroma', sans-serif; font-weight: 400; font-size: 10px; }
+.cs-win > .sticky a:hover { color: var(--pink) !important; }
+
+/* ---------- Cards, frames, chips inside the window ---------- */
+.cs-win .border-slate-900, .cs-win .border-slate-200, .cs-win .border-slate-300 { border-color: var(--edge-soft) !important; }
+.cs-win .bg-white { background: #fff !important; }
+.cs-win .bg-cream { background: #FBFAFD !important; }
+.cs-win .rounded-3xl, .cs-win .rounded-2xl { border-radius: 10px !important; }
+.cs-win .bg-white.border-2,
+.cs-win .bg-cream.border-2,
+.cs-win .artifact-frame { box-shadow: 0 2px 0 var(--edge-soft) !important; }
+.cs-win .ux-stat-card { background: #fff !important; border: 1px solid var(--edge-soft) !important; box-shadow: 0 2px 0 var(--edge-soft) !important; border-radius: 10px !important; }
+.cs-win .callout-box {
+    background: linear-gradient(180deg, #FFE6F4, #F7D3EC) !important; color: var(--ink) !important;
+    border: 0 !important; border-left: 4px solid var(--pink) !important; border-radius: 8px !important;
+    box-shadow: 0 0 0 1px #EBB5D6 !important;
+}
+.cs-win .callout-box * { color: var(--ink) !important; }
+.cs-win span.rounded-md, .cs-win a.rounded-md { border-radius: 999px !important; font-family: 'Geist Mono', monospace !important; font-weight: 500 !important; letter-spacing: .02em; }
+.cs-win .artifact-frame:hover { box-shadow: 0 0 0 2px var(--pink), 0 16px 30px -18px rgba(160, 40, 110, .5) !important; }
+
+/* Text colours */
+.cs-win .text-slate-900, .cs-win .text-slate-950 { color: var(--ink) !important; }
+.cs-win .text-slate-700, .cs-win .text-slate-800, .cs-win .text-slate-600 { color: var(--ink-soft) !important; }
+.cs-win .text-slate-500, .cs-win .text-slate-400 { color: var(--mute) !important; }
+.cs-win h1, .cs-win h2, .cs-win h3, .cs-win h4 { color: var(--ink); }
+
+/* ---------- Footer = "new message" window ---------- */
+footer#contact { background: transparent !important; color: var(--ink) !important; border: 0 !important; margin-top: 0 !important; padding-top: 32px !important; padding-bottom: 80px !important; }
+footer#contact > div > div:first-child {
+    background: var(--panel) !important; border: 0 !important; border-radius: 10px !important; position: relative; padding-top: 58px !important;
+    box-shadow: 0 0 0 1px var(--edge), inset 0 1px 0 2px #fff, 0 24px 50px -12px rgba(50, 20, 70, .45) !important; overflow: hidden;
+}
+footer#contact > div > div:first-child::before {
+    content: "NEW MESSAGE"; position: absolute; inset: 0 0 auto 0; height: 34px; padding: 0 10px 0 30px; display: flex; align-items: center;
+    font: 400 10px 'Michroma', sans-serif; background: var(--chrome); border-bottom: 1px solid var(--edge);
+}
+footer#contact > div > div:first-child::after {
+    content: ""; position: absolute; top: 11px; left: 10px; width: 12px; height: 12px; border-radius: 3px; background: var(--gem);
+}
+footer#contact .text-white, footer#contact h3 { color: var(--ink) !important; }
+footer#contact .text-slate-300 { color: var(--ink-soft) !important; }
+footer#contact a.bg-stickypink { background: var(--pink-chrome) !important; color: #fff !important; border: 0 !important; border-radius: 6px !important; box-shadow: 0 0 0 1px var(--pink-deep), 0 2px 0 var(--pink-deep) !important; }
+footer#contact button.bg-white { background: var(--chrome) !important; color: var(--ink) !important; border: 0 !important; border-radius: 6px !important; box-shadow: 0 0 0 1px var(--edge), 0 2px 0 var(--edge) !important; }
+footer#contact > div > div:last-child {
+    border: 0 !important; background: var(--chrome); border-radius: 8px; padding: 10px 16px !important;
+    box-shadow: 0 0 0 1px var(--edge), 0 2px 0 var(--edge);
+}
+footer#contact > div > div:last-child a { color: var(--ink) !important; }
+footer#contact > div > div:last-child a:hover { color: var(--pink) !important; }
+
+@media (max-width: 640px) {
+    .cs-shell { padding: 0 8px; margin-top: 12px; }
+    .cs-addr span { display: none; }
+}
+
+/* Active contents link */
+.cs-win > .sticky a.active { background: var(--pink-chrome) !important; color: #fff !important; box-shadow: 0 0 0 1px var(--pink-deep); }
+.cs-win > .sticky a.active:hover { color: #fff !important; }
+
+/* "Looking back" panel: light window card with three aligned tiles */
+.cs-win div.bg-slate-900.text-white {
+    background: #fff !important; color: var(--ink) !important;
+    border: 1px solid var(--edge-soft) !important; border-radius: 10px !important;
+    box-shadow: 0 2px 0 var(--edge-soft) !important;
+    padding: 28px !important;
+}
+.cs-win div.bg-slate-900.text-white > div:first-child { display: flex; flex-direction: column; gap: 6px; margin-bottom: 20px; }
+.cs-win div.bg-slate-900.text-white .font-hand { color: var(--pink) !important; font-size: 12px !important; letter-spacing: .08em; text-transform: uppercase; line-height: 1.4; }
+.cs-win div.bg-slate-900.text-white h3 { color: var(--ink) !important; margin: 0; }
+.cs-win div.bg-slate-900.text-white ul { gap: 14px !important; margin: 0; padding: 0; align-items: stretch; }
+.cs-win div.bg-slate-900.text-white li {
+    position: relative; border: 0 !important; margin: 0;
+    padding: 20px 18px 18px !important; border-radius: 8px;
+    background: #FBFAFD; box-shadow: inset 0 0 0 1px var(--edge-soft);
+    color: var(--ink-soft) !important; font-size: 14px; line-height: 1.6;
+}
+.cs-win div.bg-slate-900.text-white li::before {
+    content: ""; position: absolute; left: 18px; right: 18px; top: 0; height: 3px; border-radius: 0 0 3px 3px;
+}
+.cs-win div.bg-slate-900.text-white li:nth-child(1)::before { background: linear-gradient(90deg, #FF9BD6, #E0479F); }
+.cs-win div.bg-slate-900.text-white li:nth-child(2)::before { background: linear-gradient(90deg, #C6B2FF, #8A63F0); }
+.cs-win div.bg-slate-900.text-white li:nth-child(3)::before { background: linear-gradient(90deg, #A8EBC4, #3BAF74); }
+.cs-win div.bg-slate-900.text-white li strong {
+    color: var(--ink) !important; font-family: 'Michroma', sans-serif; font-weight: 400; font-size: 12px; line-height: 1.5;
+    min-height: 3em; margin-bottom: 8px !important;
+}
+@media (max-width: 767px) { .cs-win div.bg-slate-900.text-white li strong { min-height: 0; } }
+
+/* ==========================================================================
+   Shared components: same look in every case study
+   ========================================================================== */
+/* Accent text that used to sit on dark/cream: darker tints so it reads on light panels */
+.cs-win .text-stickyyellow { color: #7650E0 !important; }
+.cs-win .text-stickyblue { color: #2F78C8 !important; }
+.cs-win .text-emerald-500, .cs-win .text-emerald-400 { color: #2E9E66 !important; }
+.cs-win .text-amber-500 { color: #7650E0 !important; }
+
+/* Dark highlight panels (insights / market gap) become pink insight callouts */
+.cs-win div.bg-slate-900.text-white:not(:has(> ul)) {
+    background: linear-gradient(180deg, #FFF0F8, #FBE3F1) !important;
+    border: 0 !important; border-left: 4px solid var(--pink) !important;
+    box-shadow: 0 0 0 1px #EBB5D6 !important; border-radius: 8px !important;
+    padding: 20px 22px !important;
+}
+.cs-win div.bg-slate-900.text-white:not(:has(> ul)) :is(p, li, span:not([class*="bg-"])) { color: var(--ink-soft) !important; }
+.cs-win div.bg-slate-900.text-white:not(:has(> ul)) :is(h3, h4, strong) { color: var(--ink) !important; }
+.cs-win div.bg-slate-900.text-white:not(:has(> ul)) .font-hand { color: var(--pink) !important; }
+/* The looking-back tile styles only apply to the panel with the list */
+.cs-win div.bg-slate-900.text-white:not(:has(> ul)) > div:first-child { display: block; margin: 0; }
+
+/* Table header rows */
+.cs-win tr.bg-slate-900 { background: var(--chrome) !important; color: var(--ink) !important; border-bottom: 1px solid var(--edge) !important; }
+.cs-win tr.bg-slate-900 th { color: var(--ink) !important; font-family: 'Michroma', sans-serif; font-weight: 400; font-size: 10px; letter-spacing: .03em; }
+.cs-win table { border-collapse: separate; border-spacing: 0; }
+.cs-win .overflow-x-auto:has(> table) { border-radius: 10px !important; border: 1px solid var(--edge-soft) !important; box-shadow: 0 2px 0 var(--edge-soft) !important; }
+
+/* Section kickers ("01. Overview") */
+.cs-win section > span.font-hand:first-child,
+.cs-win section > div > span.font-hand:first-child { color: var(--pink) !important; font-size: 12px !important; letter-spacing: .1em; text-transform: uppercase; }
+
+/* Next / previous case study buttons */
+.cs-win a[href^="case-study-"].bg-stickypink {
+    background: var(--pink-chrome) !important; color: #fff !important; border: 0 !important; border-radius: 6px !important;
+    box-shadow: 0 0 0 1px var(--pink-deep), 0 2px 0 var(--pink-deep) !important; font-family: 'Michroma', sans-serif; font-weight: 400;
+}
+
+/* Figma buttons */
+.cs-win a[href*="figma.com"] { border-radius: 6px !important; }

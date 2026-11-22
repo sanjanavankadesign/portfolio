@@ -614,3 +614,19 @@ h1[class*="text-"] {
     .hero-name { font-size: 50px; }
     .hero-role { font-size: 26px; }
 }
+
+/* How I Work cards: lift them off the dark band so they read as cards */
+#process .grid > div {
+    background: #27324A;
+    border-color: rgba(250, 247, 238, 0.16) !important;
+}
+#process .grid > div:hover {
+    border-color: rgba(250, 247, 238, 0.32) !important;
+}
+#process .grid > div > p:first-of-type {
+    color: #E5E9F0;
+}
+#process .grid > div > p:last-of-type {
+    border-top-color: rgba(250, 247, 238, 0.16);
+    color: #C3CAD6;
+}
