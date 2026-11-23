@@ -216,3 +216,17 @@ footer#contact > div > div:last-child a:hover { color: var(--pink) !important; }
 
 /* Figma buttons */
 .cs-win a[href*="figma.com"] { border-radius: 6px !important; }
+
+/* ---------- Final designs up front ---------- */
+.cs-finals { background: #fff; border: 1px solid var(--edge-soft); border-radius: 10px; padding: 24px; }
+.cs-finals__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.cs-finals__head h2 { font-family: 'Michroma', sans-serif; font-size: 18px; color: var(--ink); }
+.cs-finals__head a { font-family: 'Geist Mono', monospace; font-size: 12px; color: var(--pink); text-transform: uppercase; letter-spacing: .04em; }
+.cs-finals__head a:hover { color: var(--pink-deep); }
+.cs-finals__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.cs-final { display: flex; flex-direction: column; border: 1px solid var(--edge-soft); border-radius: 8px; overflow: hidden; background: var(--panel); transition: box-shadow .2s, transform .2s; }
+.cs-final:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--pink); }
+.cs-final__img { aspect-ratio: 16 / 9; overflow: hidden; background: #EFEBF5; border-bottom: 1px solid var(--edge-soft); }
+.cs-final__img img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.cs-final__label { padding: 10px 12px; font-family: 'Michroma', sans-serif; font-size: 11px; color: var(--ink); }
+@media (max-width: 560px) { .cs-finals { padding: 16px; } .cs-finals__grid { grid-template-columns: 1fr; } }

@@ -280,3 +280,15 @@ h1, h2, h3, h4 { font-family: var(--font-ui); font-weight: 400; margin: 0; lette
     .mail__btns { grid-template-columns: 1fr; }
     .evolving { flex-direction: column; gap: 6px; }
 }
+
+/* Other work: smaller cards below the two case studies */
+.other-title { font: 400 12px var(--font-ui); letter-spacing: .08em; text-transform: uppercase; color: var(--mute); margin: 34px 0 14px; }
+.proj--mini { flex-direction: row; }
+.proj--mini .proj__media { aspect-ratio: auto; width: 38%; flex-shrink: 0; border-bottom: 0; border-right: 1px solid #E3DEEC; }
+.proj--mini .proj__media img.contain { width: 70%; }
+.proj--mini .proj__badge { display: none; }
+.proj--mini .proj__body { padding: 16px 18px; }
+.proj--mini h3 { font-size: 14px; }
+.proj--mini p { font-size: 13px; }
+.proj--mini .tags { display: none; }
+@media (max-width: 560px) { .proj--mini { flex-direction: column; } .proj--mini .proj__media { width: 100%; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid #E3DEEC; } }
