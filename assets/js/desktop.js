@@ -1,5 +1,13 @@
 // Y2K Desktop homepage interactions
 (function () {
+    // Show the crisp still first, then swap in the spinning logo once it has loaded
+    const logo = document.querySelector('.logo3d img[data-spin]');
+    if (logo && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const spin = new Image();
+        spin.onload = () => { logo.src = spin.src; };
+        spin.src = logo.dataset.spin;
+    }
+
     // Clock
     const clock = document.getElementById('clock');
     const tick = () => { clock.textContent = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); };
