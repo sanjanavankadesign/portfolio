@@ -301,3 +301,10 @@ footer#contact a.bg-stickypink,
     -webkit-backdrop-filter: blur(14px) saturate(1.3);
     backdrop-filter: blur(14px) saturate(1.3);
 }
+
+/* Colophon under the case study footer */
+.cs-colophon { max-width: 52rem; margin: 18px auto 0; padding: 0 24px; text-align: center; }
+.cs-colophon p { font: 400 12px/1.7 'Geist', sans-serif; color: var(--ink-soft); }
+.cs-colophon strong { font-weight: 600; color: var(--ink); }
+.cs-colophon a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(224, 71, 159, .45); text-underline-offset: 3px; }
+.cs-colophon a:hover { color: var(--pink); }

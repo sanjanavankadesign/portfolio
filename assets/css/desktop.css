@@ -377,3 +377,12 @@ body {
     .icon__img, .icon__img img { width: 48px; height: 48px; }
     .icon span:last-child { font-size: 9px; padding: 2px 2px; white-space: nowrap; }
 }
+
+/* Colophon above the footer */
+.colophon { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 28px; padding: 22px 40px; border-top: 1px solid #DCD6E6; background: #FBFAFD; }
+.colophon h3 { font: 400 10px var(--font-ui); letter-spacing: .08em; color: var(--pink); margin-bottom: 8px; }
+.colophon p { font-size: 13px; line-height: 1.6; color: var(--ink-soft); }
+.colophon a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(224, 71, 159, .45); text-underline-offset: 3px; }
+.colophon a:hover { color: var(--pink); }
+.foot { border-top-style: dashed; }
+@media (max-width: 900px) { .colophon { grid-template-columns: 1fr; gap: 16px; padding: 18px 20px; } }
