@@ -386,3 +386,9 @@ body {
 .colophon a:hover { color: var(--pink); }
 .foot { border-top-style: dashed; }
 @media (max-width: 900px) { .colophon { grid-template-columns: 1fr; gap: 16px; padding: 18px 20px; } }
+
+/* Centered 3D logo; About window tucked bottom-left so it doesn't cover it */
+@media (min-width: 901px) {
+    .logo3d { left: 50%; top: 45%; }
+    .w-about { left: 136px; top: auto; bottom: 64px; }
+}
